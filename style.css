@@ -56,12 +56,16 @@ a.grey-text {
 a.bordered.light {
   padding: 0.5rem 1rem 0.5rem 1rem;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
+  width: fit-content;
+  text-align: center;
 }
 
 a.bordered.dark {
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border: 1px solid black;
+  border: 2px solid black;
+  width: fit-content;
+  text-align: center;
 }
 
 .logo {
@@ -75,7 +79,7 @@ nav.nav {
   justify-content: space-between;
   align-items: center;
   background: white;
-  padding: 0 10%;
+  padding: 1rem 10%;
 }
 
 nav.nav > section.flex {
@@ -83,6 +87,7 @@ nav.nav > section.flex {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0 1rem;
 }
 
 .hamburger-menu {
@@ -95,16 +100,36 @@ section.first-section {
   color: white;
   background-color: hsl(256, 26%, 20%);
   padding: 0 10%;
+  background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 6rem;
+}
+
+section.first-section > section.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+section.first-section > img {
+  position: relative;
+  top: 5rem;
 }
 
 section.second-section {
   display: flex;
   flex-direction: column;
-  padding: 0 10%;
+  gap: 2rem;
+  padding: 10%;
 }
 
 section.second-section > section.flex {
   display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 section.second-section > aside {
@@ -113,35 +138,63 @@ section.second-section > aside {
   justify-content: space-between;
   align-items: center;
   background-color: hsl(256, 26%, 20%);
+  padding: 2rem 1.5rem;
+  margin: 2rem 0 0 0;
 }
 
 footer {
-  padding: 0 10%;
+  padding: 1rem 10%;
+  background: rgb(232, 232, 232);
 }
 
 footer > section.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 }
 
 footer > section.flex.nav {
   justify-content: center;
+  align-items: unset;
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  border-top: 2px solid rgb(199, 199, 199);
 }
 
 section.social.flex {
   display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0;
 }
 
 section.footer.nav {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 img.second-section.icon {
   width: 3rem;
 }
 
+section.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 section.flex > section.about > h1 {
   font-size: 1.5rem;
+}
+
+p.light {
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+div.line {
+  width: 5rem;
+  border-bottom: 2px solid grey;
 }
