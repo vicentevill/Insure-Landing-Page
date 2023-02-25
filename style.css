@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  /* background: rgba(146, 146, 146, 0.266); */
+  outline: dotted 2px;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+}
+
+p {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+a.grey-text {
+  color: grey;
+}
+
+a.bordered.light {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: white;
+  border: 1px solid white;
+}
+
+a.bordered.dark {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 1px solid black;
+}
+
+.logo {
+  content: url(/images/logo.svg);
+  width: fit-content;
+  height: fit-content;
+}
+
+nav.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0 10%;
+}
+
+nav.nav > section.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+section.first-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  background-color: hsl(256, 26%, 20%);
+  padding: 0 10%;
+}
+
+section.second-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+section.second-section > section.flex {
+  display: flex;
+}
+
+section.second-section > aside {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(256, 26%, 20%);
+}
+
+footer {
+  padding: 0 10%;
+}
+
+footer > section.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > section.flex.nav {
+  justify-content: center;
+}
+
+section.social.flex {
+  display: flex;
+}
+
+section.footer.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+img.second-section.icon {
+  width: 3rem;
+}
+
+section.flex > section.about > h1 {
+  font-size: 1.5rem;
+}
