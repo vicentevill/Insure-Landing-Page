@@ -47,6 +47,17 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+  cursor: pointer;
+  display: relative;
+  z-index: 4;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+social.icon {
+  cursor: pointer;
 }
 
 a.grey-text {
@@ -90,8 +101,26 @@ nav.nav > section.flex {
   padding: 0 1rem;
 }
 
+div.overlay {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-image: url(images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 15rem;
+  z-index: 1;
+}
+
 .hamburger-menu {
   display: none;
+  cursor: pointer;
+}
+
+a.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section.first-section {
@@ -100,10 +129,10 @@ section.first-section {
   color: white;
   background-color: hsl(256, 26%, 20%);
   padding: 0 10%;
-  background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+  background-image: url(/images/bg-desktop-bottom-left.svg);
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: 6rem;
+  background-size: 10rem;
 }
 
 section.first-section > section.flex {
@@ -124,6 +153,10 @@ section.second-section {
   flex-direction: column;
   gap: 2rem;
   padding: 10%;
+  background-image: url(/images/bg-desktop-top-left.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 10rem;
 }
 
 section.second-section > section.flex {
@@ -140,6 +173,9 @@ section.second-section > aside {
   background-color: hsl(256, 26%, 20%);
   padding: 2rem 1.5rem;
   margin: 2rem 0 0 0;
+  background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 footer {
@@ -197,4 +233,115 @@ p.light {
 div.line {
   width: 5rem;
   border-bottom: 2px solid grey;
+}
+
+a.bordered.dark:hover {
+  background-color: black;
+  color: white;
+}
+
+a.bordered.light:hover {
+  background-color: white;
+  color: black;
+}
+
+a.grey-text.nav:hover {
+  color: rgb(50, 50, 50);
+}
+
+img.social.icon:hover {
+  filter: brightness(70%);
+}
+
+nav.mobile-nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(256, 26%, 20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-image: url(/images/bg-pattern-mobile-nav.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  display: none;
+}
+
+a.mobile {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.bordered.light.mobile {
+  max-width: 20rem;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: 1px solid;
+}
+
+@media only screen and (max-width: 700px) {
+  a.nav {
+    display: none;
+  }
+
+  img.hamburger-menu {
+    display: block;
+  }
+
+  div.overlay {
+    display: none;
+  }
+
+  div.line {
+    display: none;
+  }
+
+  section.first-section {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  section.first-section > img {
+    top: 0;
+  }
+
+  section.first-section > section.flex {
+    align-items: center;
+    padding: 20% 10%;
+  }
+
+  section.first-section > section.flex * {
+    text-align: center;
+  }
+
+  section.second-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section.second-section > section.flex {
+    flex-direction: column;
+  }
+
+  section.about {
+    align-items: center;
+  }
+
+  section.second-section > aside {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  footer > section.flex {
+    flex-direction: column;
+    text-align: center;
+  }
 }
